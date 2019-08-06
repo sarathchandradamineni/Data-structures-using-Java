@@ -1,15 +1,19 @@
+//Implementation of Merge Sort in Java
 import java.util.Scanner;
 class MergeSortJava
 {
+	//Merging of the two Arrays
 	public void merge(int arr[],int l,int m,int r)
 	{
 		//setting the sizes of the two sub arrays
 		int n1 = m-l+1;
 		int n2 = r-m;
 		
+		//Creating empty Arrays of require size
 		int l_arr[] = new int[n1];
 		int r_arr[] = new int[n2];
 		
+		//Initailizing the two empty Arrays Created with Required size
 		for(int i = 0;i < n1; i++)
 			l_arr[i] = arr[l+i];
 		for(int j = 0;j < n2; j++)
@@ -17,6 +21,7 @@ class MergeSortJava
 		
 		int i =0,j=0,k=l;
 		
+		//Merging the two Arrays 
 		while(i<n1 && j<n2)
 		{
 			if(l_arr[i] <= r_arr[j])
@@ -45,11 +50,10 @@ class MergeSortJava
 			j++;
 			k++;
 		}
-		
-		
-		
-		
+			
 	}
+	
+	//Dividing the Main array in to various small sub Arrays
 	public void sort(int arr[],int l,int r)
 	{
 		//find the middle element
@@ -91,6 +95,7 @@ class MergeSortJava
 		
 		sc.close();
 		
+		//Object Creation for the class MergeSortJava
 		MergeSortJava msj = new MergeSortJava();
 		msj.sort(arr,0,arr.length-1);
 		
