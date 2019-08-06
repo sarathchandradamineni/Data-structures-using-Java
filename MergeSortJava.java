@@ -1,4 +1,6 @@
 //Implementation of Merge Sort in Java
+// Divide Conquere Technique
+// Best,Avg,Worst case time complexity: O(nlog(n))
 import java.util.Scanner;
 class MergeSortJava
 {
